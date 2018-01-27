@@ -9,31 +9,31 @@
         width: 530px;
         min-height: 300px;
         margin: 30px auto;
+        border: 3px solid #666666;
+        padding: 5px;
+        text-align: center;
     }
     #gallery {
-        width: 100%;
-        height: 100%;
         display: flex;
+        justify-content: space-around;
         flex-wrap: wrap;
-        align-content: space-between;
     }
-    #gallery > img {
+    #gallery img {
         width: 100px;
     }
 </style>
 <body>
 
 <div class="wrap_gal">
-    <div id="gallery"></div>
+    <div id="gallery"><?php reload_gallery();?></div>
 </div>
 
 
 <form enctype="multipart/form-data" action="?" method="post">
-    <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
-    Выбрите изображение для загрузки: <input type="file" name="myfile" />
+    <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+    Выберите изображение для загрузки: <input type="file" name="myfile" />
     <input type="submit" value="Загрузить" name="nextimg" />
 </form>
-
 
 <?php
 if (isset($_POST['nextimg']))
@@ -44,25 +44,38 @@ if (isset($_POST['nextimg']))
     $destination = $uploaddir.$_FILES['myfile']['name'];
     // имя файла оставим неизменным
 
+    if ($_FILES['myfile']['type'] == 'image/jpeg' && (int)$_FILES['myfile']['size'] <= 1048576) {
+        print "<br><pre>";
+        if (move_uploaded_file($_FILES['myfile']['tmp_name'],$destination))
+        {
+            /* перемещаем файл из временной папки
+            в выбранную директорию для хранения */
+            print "Файл успешно загружен <br>";
+            echo "<script></script>";
+        } else
+        {
+            echo "Произошла ошибка при загрузке файла.";
+        };
 
-    echo "<br><pre>";
-    print_r($_FILES);
-    echo "</pre>";
-
-    print "<br><pre>";
-    if (move_uploaded_file($_FILES['myfile']['tmp_name'],$destination))
-    {
-        /* перемещаем файл из временной папки
-        в выбранную директорию для хранения */
-        print "Файл успешно загружен <br>";
-    } else
-    {
-        echo "Произошла ошибка при загрузке файла.
-    Некоторая отладочная информация:<br>";
-        print_r($_FILES);
+    } else {
+        echo "<br/>Loaded file in not an image OR it's size more than 1Mb! Try again!";
     }
-    print "</pre>";
+
+
 }
+
+function reload_gallery() {
+    $dir = 'img/';
+    $files = scandir($dir);
+    for ($i = 0; $i < count($files); $i++) {
+        if (($files[$i] != ".") && ($files[$i] != "..")) {
+            $path = $dir.$files[$i];
+            echo "<a href='$path' target='_blank'>";
+            echo "<img src='$path' alt=''/>";
+            echo "</a>";
+        }
+    }
+};
 
 
 ?>
