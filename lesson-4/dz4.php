@@ -35,6 +35,7 @@
     <input type="submit" value="Загрузить" name="nextimg" />
 </form>
 
+<div id="service">
 <?php
 if (isset($_POST['nextimg']))
 {
@@ -50,11 +51,12 @@ if (isset($_POST['nextimg']))
         {
             /* перемещаем файл из временной папки
             в выбранную директорию для хранения */
-            print "Файл успешно загружен <br>";
-            echo "<script></script>";
+            print "<span id='do_reload'>Файл успешно загружен</span><br>";
+            print "<script>window.location.href ='dz4.php';</script>";
         } else
         {
             echo "Произошла ошибка при загрузке файла.";
+            die('error');
         };
 
     } else {
@@ -79,3 +81,4 @@ function reload_gallery() {
 
 
 ?>
+</div>
