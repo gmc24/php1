@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/scss/style2.css">
+</head>
+<body>
+
+<!--Верх шапки-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2 text-left">
+            <a href="index.html" class="logo"><span class="spritelogo"></span> BRAN<span>D</span></a>
+        </div>
+        <div class="col-lg-6">
+            <div class="search-block input-group">
+                <div class="input-group-btn">
+                    <div class="dropdown">
+                        <a class="sb-cat-btn dropdown-toggle" data-toggle="dropdown" href="#">Browse <i
+                                class="caret"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">All Items</a></li>
+                            <li><a href="product.html">Man</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Kids</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Hot deals</a></li>
+                            <li><a href="#">Outlet</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <input type="search" class="form-control sb-input" placeholder="Search for item..."
+                       aria-label="Search for...">
+                <div class="input-group-btn">
+                    <button class="btn sb-search-btn" type="button"><i class="fa fa-search"
+                                                                       aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="header-right col-lg-4">
+            <a class="shop-cart" href="shopping-cart.html"><span class="cart-badge">3</span><span class="spritecart"></span></a>
+
+            <div class="dropdown">
+                <a href="#" class="my_acc_btn dropdown-toggle" data-toggle="dropdown">My Account<i
+                        class="caret"></i></a>
+                <ul class="acc_menu dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">My orders</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Bonus card</a></li>
+                    <li class="divider"></li>
+                    <li>
+                        <div class="am_last_item"><a href="#">Sign in</a> || <a href="#">Create account</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<hr class="header-hr">
+
+<!--Блок основной навигации-->
+<nav class="navbar navbar-light">
+    <div class=" container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <div class="nav collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="index.html" class="#active-link nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="has-submenu nav-item">
+                    <a href="product.html" class="nav-link">Man</a>
+
+                    <div class="mega_menu">
+                        <div class="mm-wrapper">
+                            <div class="mm-cat-header">
+                                <div class="mm-discount">
+                                    <div class="mm-caption">
+                                        <h3>Spec Offers</h3>
+                                    </div>
+                                    <div class="mm-content">
+                                        <img src="img/mens_mm-excmanlogo_50off_usa.jpg" alt="discounts">
+                                    </div>
+                                </div>
+                                <div class="mm-cat-img">
+                                    <img src="img/cat-man.png" alt="Category Image - MAN">
+                                </div>
+                            </div>
+                            <div class="mm-subcats">
+                                <div class="mm-caption">
+                                    <h3>For Man</h3>
+                                </div>
+                                <div class="mm-content">
+                                    <ul>
+                                        <li>
+                                            <h4>Clothing</h4>
+                                            <ul>
+                                                <li><a href="#">men's item 01</a></li>
+                                                <li><a href="#">men's item 02</a></li>
+                                                <li><a href="#">men's item 03</a></li>
+                                                <li><a href="#">men's item 04</a></li>
+                                                <li><a href="#">men's item 05</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>Shoes</h4>
+                                            <ul>
+                                                <li><a href="#">men's item 01</a></li>
+                                                <li><a href="#">men's item 02</a></li>
+                                                <li><a href="#">men's item 03</a></li>
+                                                <li><a href="#">men's item 04</a></li>
+                                                <li><a href="#">men's item 05</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>Hats</h4>
+                                            <ul>
+                                                <li><a href="#">men's item 01</a></li>
+                                                <li><a href="#">men's item 02</a></li>
+                                                <li><a href="#">men's item 03</a></li>
+                                                <li><a href="#">men's item 04</a></li>
+                                                <li><a href="#">men's item 05</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>Umbrellas</h4>
+                                            <ul>
+                                                <li><a href="#">men's item 01</a></li>
+                                                <li><a href="#">men's item 02</a></li>
+                                                <li><a href="#">men's item 03</a></li>
+                                                <li><a href="#">men's item 04</a></li>
+                                                <li><a href="#">men's item 05</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mm-features">
+                                <div class="mm-caption">
+                                    <h3>Featured Category</h3>
+                                </div>
+                                <div class="mm-content">
+                                    <div class="mm-feature-1">
+                                        <div class="feature-item">
+                                            <div class="f-thmb">
+                                                <div class="hover-cart-btn">
+                                                    <a href="shopping-cart.html" class="hover-add-to-cart"><span
+                                                            class="spritecart2"></span>Add to Cart</a>
+                                                </div>
+                                                <div class="overlay-bg"></div>
+                                                <div class="f-img"><img src="img/01.jpg"
+                                                                        alt="mango people t-shirt">
+                                                </div>
+                                            </div>
+                                            <div class="f-desc">
+                                                <a href="single-page.html" class="f-title">mango people t-shirt</a>
+                                                <div class="f-price">52.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mm-feature-2">
+                                        <div class="feature-item">
+                                            <div class="f-thmb">
+                                                <div class="hover-cart-btn">
+                                                    <a href="shopping-cart.html" class="hover-add-to-cart"><span
+                                                            class="spritecart2"></span>Add to Cart</a>
+                                                </div>
+                                                <div class="overlay-bg"></div>
+                                                <div class="f-img"><img src="img/08.jpg" alt=""></div>
+                                            </div>
+                                            <div class="f-desc">
+                                                <a href="single-page.html" class="f-title">mango people t-shirt</a>
+                                                <div class="f-price">52.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-submenu nav-item"><a class="nav-link" href="product.html">Women</a>
+
+                    <div class="mega_menu">
+
+                    </div>
+                </li>
+                <li class="has-submenu nav-item"><a class="nav-link" href="product.html">Kids</a>
+
+                    <div class="mega_menu">
+
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="product.html">Accessories</a></li>
+                <li class="nav-item"><a class="nav-link" href="product.html">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="product.html">Hot Deals</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Блок заголовка и крошек-->
+<div class="red-head container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6"><h1>New Arrivals</h1></div>
+            <div class="col-lg-6 text-right">
+                <nav class="breadcrumb"><a href="" class="breadcrumb-item">Home</a><a href="" class="breadcrumb-item">Men</a><span
+                        class="breadcrumb-item active">New Arrivals</span></nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--основной блок страницы -->
+<main>
+    <form class="form-inline">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 shopping-cart">
+                    <table class="cart table">
+                        <tbody>
+                        <tr>
+                            <th>product details</th>
+                            <th>unit price</th>
+                            <th>quantity</th>
+                            <th>shipping</th>
+                            <th>subtotal</th>
+                            <th>action</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-thmb"><img src="img/buy-01.jpg" alt="buy mango people t-shirt"></div>
+                                <div class="item-desc">
+                                    <h4>mango people t-shirt</h4>
+                                    <dl>
+                                        <dt>Color:</dt>
+                                        <dd>Red</dd>
+                                        <dt>Size:</dt>
+                                        <dd>XII</dd>
+                                    </dl>
+                                </div>
+                            </td>
+                            <td>$150</td>
+                            <td class="item-quantity"><input type="text" class="form-control" pattern="/d+"></td>
+                            <td>free</td>
+                            <td>$300</td>
+                            <td class="item-delete"><a href="#"><i class="fa fa-times-circle"
+                                                                   aria-hidden="true"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-thmb"><img src="img/buy-02.jpg" alt="buy mango people t-shirt"></div>
+                                <div class="item-desc">
+                                    <h4>mango people t-shirt</h4>
+                                    <dl>
+                                        <dt>Color:</dt>
+                                        <dd>Red</dd>
+                                        <dt>Size:</dt>
+                                        <dd>XII</dd>
+                                    </dl>
+                                </div>
+                            </td>
+                            <td>$150</td>
+                            <td class="item-quantity"><input type="text" class="form-control" pattern="/d+"></td>
+                            <td>free</td>
+                            <td>$300</td>
+                            <td class="item-delete"><a href="#"><i class="fa fa-times-circle"
+                                                                   aria-hidden="true"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-thmb"><img src="img/buy-03.jpg" alt="buy mango people t-shirt"></div>
+                                <div class="item-desc">
+                                    <h4>mango people t-shirt</h4>
+                                    <dl>
+                                        <dt>Color:</dt>
+                                        <dd>Red</dd>
+                                        <dt>Size:</dt>
+                                        <dd>XII</dd>
+                                    </dl>
+                                </div>
+                            </td>
+                            <td>$150</td>
+                            <td class="item-quantity"><input type="text" class="form-control" pattern="/d+"></td>
+                            <td>free</td>
+                            <td>$300</td>
+                            <td class="item-delete"><a href="#"><i class="fa fa-times-circle"
+                                                                   aria-hidden="true"></i></a></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="cart-buttons">
+                        <a href="#" class="clear-btn">clear shopping cart</a>
+                        <a href="#" class="continue-btn">continue shopping</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cart-conditions">
+                <div class="col-md-4">
+                    <h4>shipping address</h4>
+                    <div class="input-group">
+                        <select size="5" class="selectpicker form-control" name="country" id="country">
+                            <option>Russia</option>
+                            <option>France</option>
+                            <option>England</option>
+                            <option>Germany</option>
+                            <option selected>Bangladesh</option>
+                        </select>
+                        <input class="form-control" type="text" placeholder="State">
+                        <input class="form-control" type="text" placeholder="Postcode/Zip" pattern="/d+">
+                    </div>
+                    <a href="#" class="cart-cond-btn">get a quote</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>coupon discount</h4>
+                    <p>Enter your coupon code if you have one</p>
+                    <div class="input-group">
+                        <input class="form-control" type="text" placeholder="State">
+                    </div>
+                    <a href="#" class="cart-cond-btn">apply coupon</a>
+                </div>
+                <div class="col-md-4">
+                    <div class="to-checkout">
+                        <div class="total">
+                            <p class="subtotal">sub total<span>$900</span></p>
+                            <p class="grandtotal">grand total<span>$900</span></p>
+                        </div>
+                        <a href="checkout.html" class="to-checkout-btn">proceed to checkout</a></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+
+
+<!--Блок отзывов и подписка-->
+<div class="container-fluid test_bg testimonials">
+    <hr class="test-delimeter">
+    <div class="container">
+        <div class="row test-container">
+
+
+            <div class="col-md-6 testimonial-block">
+
+                <input type="radio" id="test-switcher-1" name="switcher">
+                <input type="radio" id="test-switcher-2" name="switcher">
+                <input type="radio" id="test-switcher-3" name="switcher">
+
+                <div class="test-mask">
+                    <div class="test-item">
+                        <img src="img/Einstein.jpg" alt="Einstein A.">
+                        <blockquote>
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, distinctio, in?
+                                Animi culpa dignissimos eum facere laudantium pariatur?”</p>
+                            <cite>Einstein A.<br><span>Prinston, USA</span></cite>
+                        </blockquote>
+                    </div>
+                    <div class="test-item">
+                        <img src="img/avatar.jpg" alt="Bin Burhan">
+                        <blockquote>
+                            <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,  a pulvinar purus condimentum a.
+                                Aliquam condimentum mattis neque sed pretium”</p>
+                            <cite>Bin Burhan<br><span>Dhaka, Bd</span></cite>
+                        </blockquote>
+                    </div>
+                    <div class="test-item">
+                        <img src="img/putin.jpg" alt="Putin V.">
+                        <blockquote>
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eveniet in possimus
+                                qui quia reiciendis tenetur. Cumque id molestias.”</p>
+                            <cite>Putin V.<br><span>Moscow, Russia</span></cite>
+                        </blockquote>
+                    </div>
+                </div>
+
+
+                <div class="test-nav">
+                    <label for="test-switcher-1"><span class="line"></span></label>
+                    <label for="test-switcher-2"><span class="line"></span></label>
+                    <label for="test-switcher-3"><span class="line"></span></label>
+                </div>
+
+            </div>
+
+            <!--<div class="testimonial-block col-md-6">
+                <div class="test-item">
+                    <img src="img/avatar.jpg" alt="Bin Burhan">
+                    <blockquote>
+                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,  a pulvinar purus condimentum a.
+                            Aliquam
+                            condimentum mattis neque sed pretium”</p>
+                        <cite>Bin Burhan<br><span>Dhaka, Bd</span></cite>
+                    </blockquote>
+                </div>
+                <div class="test-nav"><span class="line"></span><span class="line cur-line"></span><span
+                        class="line"></span></div>
+            </div>-->
+
+
+            <div class="subscribe-block col-md-6">
+                <div class="subscribe-title">subscribe<br><span>for our newsletters and promotion</span></div>
+                <div class="email-block">
+                    <input type="email" placeholder="Enter Your Email">
+                    <a class="subscribe-btn" href="#">Subscribe</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!--Подвал-->
+<div class="footer">
+    <div class="container">
+        <div class="row footer-widgets">
+            <div class="fw-desc col-md-6">
+                <div class="logo nopads"><span class="spritelogo"></span>BRAN<span>D</span></div>
+
+                <div class="desc-text"><p>Objectively transition extensive data rather than cross functional solutions.
+                    Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly
+                    syndicate an expanded array of processes and cross-unit partnerships.</p>
+
+                    <p>  Efficiently plagiarize 24/365 action items and focused infomediaries.  Distinctively seize
+                        superior initiatives for wireless technologies. Dynamically optimize.  </p></div>
+            </div>
+            <nav class="col-md-2">
+                <div class="fw-title">Company</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="col-md-2">
+                <div class="fw-title">Information</div>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">How To Buy</a></li>
+                    <li><a href="#">How To Sell</a></li>
+                    <li><a href="#">Promotion</a></li>
+                </ul>
+            </nav>
+            <nav class="col-md-2">
+                <div class="fw-title">Shop Category</div>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Child</a></li>
+                    <li><a href="#">Apparel</a></li>
+                    <li><a href="#">Browse All</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--copyrights + socials-->
+    <div class="copy container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><span class="copyrights">© 2017 Brand All Rights Reserved.</span></div>
+
+                <div class="col-md-6 text-right">
+                    <div class="footer-socials">
+                        <a href="#fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#in"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#p"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                        <a href="#g"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Include JS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+</body>
+</html>
