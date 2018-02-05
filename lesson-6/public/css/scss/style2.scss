@@ -2662,3 +2662,41 @@ section .prem {
     }
   }
 }
+
+.all-testimonials {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  height: 46px;
+  background-color: #f16d7f;
+  border-radius: 23px;
+  color: white;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 46px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.35px;
+  padding: 0 20px;
+}
+
+.all-testimonialsl:hover {
+  background: #f16d7f;
+  background: -moz-linear-gradient(top, #f16d7f 0%, #f16d7f 40%, #d36170 100%);
+  background: -webkit-linear-gradient(top, #f16d7f 0%, #f16d7f 40%, #d36170 100%);
+  background: linear-gradient(to bottom, #f16d7f 0%, #f16d7f 40%, #d36170 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f16d7f', endColorstr='#d36170', GradientType=0);
+  color: #FFFFFF;
+}
+
+.all-testimonials:visited {
+  color: #FFFFFF;
+}
+
+.testimonials-list > .test-item > img {
+  border-radius: 100%;
+  float: left;
+  margin:20px;
+}

@@ -1,3 +1,7 @@
+<?php
+$test = getTestimonials(3);
+?>
+
 <div id="testimonials" class="container-fluid test_bg">
     <hr class="test-delimeter">
     <div class="container">
@@ -10,30 +14,15 @@
                 <input type="radio" id="test-switcher-3" name="switcher">
 
                 <div class="test-mask">
+                    <? foreach ($test as $key => $value) {?>
                     <div class="test-item">
-                        <img src="img/Einstein.jpg" alt="Einstein A.">
+                        <img src="<?=$value['avatar']?>" alt="<?=$value['author']?>">
                         <blockquote>
-                            <p>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, distinctio, in?
-                                Animi culpa dignissimos eum facere laudantium pariatur?”</p>
-                            <cite>Einstein A.<br><span>Prinston, USA</span></cite>
+                            <p><?=$value['text']?></p>
+                            <cite><?=$value['author']?><br><span><?=$value['from']?></span></cite>
                         </blockquote>
                     </div>
-                    <div class="test-item">
-                        <img src="img/avatar.jpg" alt="Bin Burhan">
-                        <blockquote>
-                            <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,  a pulvinar purus condimentum a.
-                                Aliquam condimentum mattis neque sed pretium”</p>
-                            <cite>Bin Burhan<br><span>Dhaka, Bd</span></cite>
-                        </blockquote>
-                    </div>
-                    <div class="test-item">
-                        <img src="img/putin.jpg" alt="Putin V.">
-                        <blockquote>
-                            <p>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eveniet in possimus
-                                qui quia reiciendis tenetur. Cumque id molestias.”</p>
-                            <cite>Putin V.<br><span>Moscow, Russia</span></cite>
-                        </blockquote>
-                    </div>
+                    <?};?>
                 </div>
 
 
@@ -42,6 +31,8 @@
                     <label for="test-switcher-2"><span class="line"></span></label>
                     <label for="test-switcher-3"><span class="line"></span></label>
                 </div>
+
+                <a class="all-testimonials" href="alltestimonials.php">All testimonials</a>
 
             </div>
 

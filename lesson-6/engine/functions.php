@@ -52,5 +52,10 @@ function SaleProduct()
 }
 
 
+function getTestimonials($x) {
+	$sql = "select * from testimonials where chkd = 1 and public = 1 order by add_date desc limit $x;";
+    return getAssocResult($sql);
+}
+
 
 ?>
