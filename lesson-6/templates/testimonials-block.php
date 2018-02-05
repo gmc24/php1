@@ -18,8 +18,8 @@ $test = getTestimonials(3);
                     <div class="test-item">
                         <img src="<?=$value['avatar']?>" alt="<?=$value['author']?>">
                         <blockquote>
-                            <p><?=$value['text']?></p>
-                            <cite><?=$value['author']?><br><span><?=$value['from']?></span></cite>
+                            <p><?=$value['test_text']?></p>
+                            <cite><?=$value['author']?><br><span><?=$value['author_from']?></span></cite>
                         </blockquote>
                     </div>
                     <?};?>

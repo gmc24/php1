@@ -16,6 +16,8 @@
                 <div class="row">
 
                     <?php include '../templates/testimonials-list.php' ?>
+                    <hr>
+                    <?php include '../templates/testimonials-add.php' ?>
 
                 </div>
             </div>

@@ -730,7 +730,7 @@ a:focus, a:hover {
   text-transform: uppercase;
   margin-bottom: 18px; }
 
-.cb-input-group input[required] + label::after {
+.cb-input-group input[required] + label::after, .cb-input-group textarea[required] + label::after {
   content: '*';
   font-size: 17px;
   color: #ff0d0d;
