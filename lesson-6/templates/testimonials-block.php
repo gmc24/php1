@@ -1,6 +1,5 @@
 <?php
-$test = getTestimonials(3);
-?>
+$test = getTestimonials(3);?>
 
 <div id="testimonials" class="container-fluid test_bg">
     <hr class="test-delimeter">
@@ -14,7 +13,8 @@ $test = getTestimonials(3);
                 <input type="radio" id="test-switcher-3" name="switcher">
 
                 <div class="test-mask">
-                    <? foreach ($test as $key => $value) {?>
+                    <?php _vardump($test);
+                    foreach ($test as $key => $value) {?>
                     <div class="test-item">
                         <img src="<?=$value['avatar']?>" alt="<?=$value['author']?>">
                         <blockquote>
